@@ -4,13 +4,9 @@ say for example, the user switches web browsers, the uuid will be different
 */
 
 function getUUID(){
-    let uuid
-
     try{
-        uuid = new DeviceUUID().get();
+        return new DeviceUUID().get();
     } catch(err){}
-
-    return uuid
 }
 
 const uuid = getUUID()
