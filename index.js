@@ -19,7 +19,9 @@ console.log(uuid)
 fetch('./valid-uuid.json')
 .then((res) => res.json())
 .then((data = {}) => {
+    console.log(data)
     if (data.includes(uuid)){
+        console.log('valid')
         alert('valid')
     }
 })
