@@ -3,6 +3,8 @@ UUID only works if the user is on a specific browser,
 say for example, the user switches web browsers, the uuid will be different
 */
 
+const h1 = document.querySelector('h1')
+
 function getUUID(){
     try{
         return new DeviceUUID().get();
@@ -10,7 +12,7 @@ function getUUID(){
 }
 
 const uuid = getUUID()
-console.log(uuid)
+h1.innerText = uuid.toString()
 
 fetch('./valid-uuid.json')
 .then((res) => res.json())
