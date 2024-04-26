@@ -17,7 +17,7 @@ fetch('./valid-uuid.json')
 .then((data = {}) => {
     console.log(data)
     if (data.includes(uuid)){
-        alert('valid')
+        window.location.href = "/main.html"
     } else{
         alert('not valid')
     }
